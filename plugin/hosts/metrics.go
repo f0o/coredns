@@ -22,4 +22,11 @@ var (
 		Name:      "reload_timestamp_seconds",
 		Help:      "The timestamp of the last reload of hosts file.",
 	})
+	// RequestCount is the amount of requests served from hosts-file/s
+	RequestCount = promauto.NewCounterVec(prometheus.CounterOpts{
+		Namespace: plugin.Namespace,
+		Subsystem: "hosts",
+		Name:      "requests_total",
+		Help:      "Counter of requests made per upstream.",
+	}, []string{})
 )
