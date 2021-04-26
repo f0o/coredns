@@ -27,6 +27,6 @@ var (
 		Namespace: plugin.Namespace,
 		Subsystem: "hosts",
 		Name:      "requests_total",
-		Help:      "Counter of requests made per upstream.",
+		Help:      "Counter of requests made to hosts plugin.",
 	}, []string{})
 )
